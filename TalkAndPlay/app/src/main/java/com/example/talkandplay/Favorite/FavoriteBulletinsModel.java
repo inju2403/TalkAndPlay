@@ -1,4 +1,4 @@
-package com.example.talkandplay;
+package com.example.talkandplay.Favorite;
 
 import android.widget.ImageView;
 

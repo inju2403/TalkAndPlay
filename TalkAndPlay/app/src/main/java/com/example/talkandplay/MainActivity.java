@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.example.talkandplay.Favorite.FavoriteFragment;
+import com.example.talkandplay.RealTime.RealTimeFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     private FragmentManager fragmentManager;
@@ -16,8 +19,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         fragmentManager = getSupportFragmentManager();
-        Fragment fragment = new HomeFragment();
+        Fragment favoriteFragment = new FavoriteFragment();
+        Fragment realtimeFragment = new RealTimeFragment();
 
-        fragmentManager.beginTransaction().replace(R.id.fragment, fragment).commit();
+        fragmentManager.beginTransaction().replace(R.id.fragment, realtimeFragment).commit();
     }
 }

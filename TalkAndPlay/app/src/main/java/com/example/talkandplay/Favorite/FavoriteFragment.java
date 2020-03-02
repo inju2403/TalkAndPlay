@@ -1,4 +1,4 @@
-package com.example.talkandplay;
+package com.example.talkandplay.Favorite;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,9 +11,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.talkandplay.R;
+
 import java.util.ArrayList;
 
-public class HomeFragment extends Fragment {
+public class FavoriteFragment extends Fragment {
 
     private FavoriteBulletinsAdapter adapter;
     private RecyclerView recyclerView;
@@ -22,7 +24,7 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_home, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_favorite, container, false);
 
         ArrayList<FavoriteBulletinsModel> items = new ArrayList<>();
         items.add(new FavoriteBulletinsModel("자유게시판","싸강??"));
