@@ -9,8 +9,51 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/trade_mark_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                app:srcCompat="@drawable/trade_mark_image" />
+
+            <TextView
+                android:id="@+id/group_name_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/trade_mark_imageView"
+                android:layout_margin="5dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="단체명"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/intramural_news_date_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textSize="15sp"
+                android:text="03/02 17:21" />
+
+        </RelativeLayout>
+
         <TextView
-            android:id="@+id/hot_contents_textView"
+            android:id="@+id/intramural_news_contents_textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -27,7 +70,7 @@
             android:layout_height="40dp">
 
             <TextView
-                android:id="@+id/hot_date_textView"
+                android:id="@+id/intramural_news_group_name_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:ellipsize="end"
@@ -36,7 +79,7 @@
                 android:padding="5dp"
                 android:layout_margin="5dp"
                 android:textSize="13sp"
-                android:text="03/02"/>
+                android:text="단체명"/>
 
             <ImageView
                 android:id="@+id/thumb_up_imageView"

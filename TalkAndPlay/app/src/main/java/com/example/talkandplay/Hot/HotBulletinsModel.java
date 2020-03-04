@@ -1,22 +1,22 @@
 package com.example.talkandplay.Hot;
 
 public class HotBulletinsModel {
-    private String contents_textView, hot_date_textView;
+    private String hot_contents_textView, hot_date_textView;
     private int thumb_up_number_textView, thumb_down_number_textView;
 
-    public HotBulletinsModel(String contents_textView, String hot_date_textView, int thumb_up_number_textView, int thumb_down_number_textView) {
-        this.contents_textView = contents_textView;
+    public HotBulletinsModel(String hot_contents_textView, String hot_date_textView, int thumb_up_number_textView, int thumb_down_number_textView) {
+        this.hot_contents_textView = hot_contents_textView;
         this.hot_date_textView = hot_date_textView;
         this.thumb_up_number_textView = thumb_up_number_textView;
         this.thumb_down_number_textView = thumb_down_number_textView;
     }
 
-    public String getContents_textView() {
-        return contents_textView;
+    public String getHot_contents_textView() {
+        return hot_contents_textView;
     }
 
-    public void setContents_textView(String contents_textView) {
-        this.contents_textView = contents_textView;
+    public void setHot_contents_textView(String hot_contents_textView) {
+        this.hot_contents_textView = hot_contents_textView;
     }
 
     public String getHot_date_textView() {

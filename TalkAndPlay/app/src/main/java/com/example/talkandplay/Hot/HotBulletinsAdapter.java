@@ -47,13 +47,13 @@ public class HotBulletinsAdapter extends RecyclerView.Adapter<HotBulletinsAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView thumb_up_imageView, thumb_down_imageView;
-        private TextView contents_textView, hot_date_textView, thumb_up_number_textView, thumb_down_number_textView;
+        private TextView hot_contents_textView, hot_date_textView, thumb_up_number_textView, thumb_down_number_textView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             thumb_up_imageView = itemView.findViewById(R.id.thumb_up_imageView);
             thumb_down_imageView = itemView.findViewById(R.id.thumb_down_imageView);
-            contents_textView = itemView.findViewById(R.id.contents_textView);
+            hot_contents_textView = itemView.findViewById(R.id.hot_contents_textView);
             hot_date_textView = itemView.findViewById(R.id.hot_date_textView);
             thumb_up_number_textView = itemView.findViewById(R.id.thumb_up_number_textView);
             thumb_down_number_textView = itemView.findViewById(R.id.thumb_down_number_textView);
@@ -70,7 +70,7 @@ public class HotBulletinsAdapter extends RecyclerView.Adapter<HotBulletinsAdapte
         }
 
         public void setItem(HotBulletinsModel item) {
-            contents_textView.setText(item.getContents_textView());
+            hot_contents_textView.setText(item.getHot_contents_textView());
             hot_date_textView.setText(item.getHot_date_textView());
             thumb_up_number_textView.setText(Integer.toString(item.getThumb_up_number_textView()));
             thumb_down_number_textView.setText(Integer.toString(item.getThumb_down_number_textView()));
