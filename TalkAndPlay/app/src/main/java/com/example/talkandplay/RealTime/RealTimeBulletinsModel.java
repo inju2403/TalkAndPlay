@@ -4,27 +4,15 @@ import android.widget.ImageView;
 
 public class RealTimeBulletinsModel {
     private ImageView face_imageView;
-    private String name_textView, date_textView, title_textView, contents_textView,
-            bulletin_board_name_textView, thumb_up_number_textView, thumb_down_number_textView;
+    private String name_textView, realtime_date_textView, title_textView, contents_textView,
+            bulletin_board_name_textView;
+    private int thumb_up_number_textView, thumb_down_number_textView;
 
-    public RealTimeBulletinsModel(String name_textView, String date_textView,
-                                  String title_textView, String contents_textView, String bulletin_board_name_textView,
-                                  String thumb_up_number_textView, String thumb_down_number_textView) {
+    public RealTimeBulletinsModel(String name_textView, String realtime_date_textView, String title_textView,
+                                  String contents_textView, String bulletin_board_name_textView,
+                                  int thumb_up_number_textView, int thumb_down_number_textView) {
         this.name_textView = name_textView;
-        this.date_textView = date_textView;
-        this.title_textView = title_textView;
-        this.contents_textView = contents_textView;
-        this.bulletin_board_name_textView = bulletin_board_name_textView;
-        this.thumb_up_number_textView = thumb_up_number_textView;
-        this.thumb_down_number_textView = thumb_down_number_textView;
-    }
-
-    public RealTimeBulletinsModel(ImageView face_imageView, String name_textView, String date_textView,
-                                  String title_textView, String contents_textView, String bulletin_board_name_textView,
-                                  String thumb_up_number_textView, String thumb_down_number_textView) {
-        this.face_imageView = face_imageView;
-        this.name_textView = name_textView;
-        this.date_textView = date_textView;
+        this.realtime_date_textView = realtime_date_textView;
         this.title_textView = title_textView;
         this.contents_textView = contents_textView;
         this.bulletin_board_name_textView = bulletin_board_name_textView;
@@ -48,12 +36,12 @@ public class RealTimeBulletinsModel {
         this.name_textView = name_textView;
     }
 
-    public String getDate_textView() {
-        return date_textView;
+    public String getRealtime_date_textView() {
+        return realtime_date_textView;
     }
 
-    public void setDate_textView(String date_textView) {
-        this.date_textView = date_textView;
+    public void setRealtime_date_textView(String realtime_date_textView) {
+        this.realtime_date_textView = realtime_date_textView;
     }
 
     public String getTitle_textView() {
@@ -80,19 +68,19 @@ public class RealTimeBulletinsModel {
         this.bulletin_board_name_textView = bulletin_board_name_textView;
     }
 
-    public String getThumb_up_number_textView() {
+    public int getThumb_up_number_textView() {
         return thumb_up_number_textView;
     }
 
-    public void setThumb_up_number_textView(String thumb_up_number_textView) {
+    public void setThumb_up_number_textView(int thumb_up_number_textView) {
         this.thumb_up_number_textView = thumb_up_number_textView;
     }
 
-    public String getThumb_down_number_textView() {
+    public int getThumb_down_number_textView() {
         return thumb_down_number_textView;
     }
 
-    public void setThumb_down_number_textView(String thumb_down_number_textView) {
+    public void setThumb_down_number_textView(int thumb_down_number_textView) {
         this.thumb_down_number_textView = thumb_down_number_textView;
     }
 }

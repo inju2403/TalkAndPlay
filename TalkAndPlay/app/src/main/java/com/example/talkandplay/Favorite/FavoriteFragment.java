@@ -35,7 +35,7 @@ public class FavoriteFragment extends Fragment {
         items.add(new FavoriteBulletinsModel("홍보게시판","2020년도 1학기"));
         items.add(new FavoriteBulletinsModel("동아리·학회","일정변경"));
 
-        recyclerView = rootView.findViewById(R.id.favorite_bulletins_recyclerView);
+        recyclerView = rootView.findViewById(R.id.hot_bulletins_recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         adapter = new FavoriteBulletinsAdapter(getContext(), items);

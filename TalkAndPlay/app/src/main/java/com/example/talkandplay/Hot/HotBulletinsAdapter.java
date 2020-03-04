@@ -1,4 +1,4 @@
-package com.example.talkandplay.RealTime;
+package com.example.talkandplay.Hot;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -15,12 +15,12 @@ import com.example.talkandplay.R;
 
 import java.util.ArrayList;
 
-public class RealTimeBulletinsAdapter extends RecyclerView.Adapter<RealTimeBulletinsAdapter.ViewHolder> {
+public class HotBulletinsAdapter extends RecyclerView.Adapter<HotBulletinsAdapter.ViewHolder> {
 
-    private Context context;
-    private ArrayList<RealTimeBulletinsModel> items;
+    Context context;
+    ArrayList<HotBulletinsModel> items;
 
-    public RealTimeBulletinsAdapter(Context context, ArrayList<RealTimeBulletinsModel> items) {
+    public HotBulletinsAdapter(Context context, ArrayList<HotBulletinsModel> items) {
         this.context = context;
         this.items = items;
     }
@@ -29,14 +29,14 @@ public class RealTimeBulletinsAdapter extends RecyclerView.Adapter<RealTimeBulle
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View itemView = inflater.inflate(R.layout.realtime_bulletins_item, parent, false);
-
+        View itemView = inflater.inflate(R.layout.hot_bulletins_item, parent, false);
+        
         return new ViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final RealTimeBulletinsModel item = items.get(position);
+        final HotBulletinsModel item = items.get(position);
         holder.setItem(item);
     }
 
@@ -46,22 +46,15 @@ public class RealTimeBulletinsAdapter extends RecyclerView.Adapter<RealTimeBulle
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-
-        private ImageView face_imageView, thumb_up_imageView, thumb_down_imageView;
-        private TextView name_textView, realtime_date_textView, title_textView, contents_textView,
-                bulletin_board_name_textView, thumb_up_number_textView, thumb_down_number_textView;
+        private ImageView thumb_up_imageView, thumb_down_imageView;
+        private TextView contents_textView, hot_date_textView, thumb_up_number_textView, thumb_down_number_textView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            face_imageView = itemView.findViewById(R.id.face_imageView);
             thumb_up_imageView = itemView.findViewById(R.id.thumb_up_imageView);
             thumb_down_imageView = itemView.findViewById(R.id.thumb_down_imageView);
-
-            name_textView = itemView.findViewById(R.id.name_textView);
-            realtime_date_textView = itemView.findViewById(R.id.hot_date_textView);
-            title_textView = itemView.findViewById(R.id.title_textView);
             contents_textView = itemView.findViewById(R.id.contents_textView);
-            bulletin_board_name_textView = itemView.findViewById(R.id.date_textView);
+            hot_date_textView = itemView.findViewById(R.id.hot_date_textView);
             thumb_up_number_textView = itemView.findViewById(R.id.thumb_up_number_textView);
             thumb_down_number_textView = itemView.findViewById(R.id.thumb_down_number_textView);
 
@@ -76,15 +69,11 @@ public class RealTimeBulletinsAdapter extends RecyclerView.Adapter<RealTimeBulle
             });
         }
 
-        public void setItem(RealTimeBulletinsModel item) {
-            name_textView.setText(item.getName_textView());
-            realtime_date_textView.setText(item.getRealtime_date_textView());
-            title_textView.setText(item.getTitle_textView());
+        public void setItem(HotBulletinsModel item) {
             contents_textView.setText(item.getContents_textView());
-            bulletin_board_name_textView.setText(item.getBulletin_board_name_textView());
+            hot_date_textView.setText(item.getHot_date_textView());
             thumb_up_number_textView.setText(Integer.toString(item.getThumb_up_number_textView()));
             thumb_down_number_textView.setText(Integer.toString(item.getThumb_down_number_textView()));
-            face_imageView.setImageResource(R.drawable.face_icon_image);
         }
     }
 }

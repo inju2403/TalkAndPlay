@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.example.talkandplay.Favorite.FavoriteFragment;
+import com.example.talkandplay.Hot.HotFragment;
 import com.example.talkandplay.RealTime.RealTimeFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();
         Fragment favoriteFragment = new FavoriteFragment();
         Fragment realtimeFragment = new RealTimeFragment();
+        Fragment hotFragment = new HotFragment();
 
-        fragmentManager.beginTransaction().replace(R.id.fragment, realtimeFragment).commit();
+        fragmentManager.beginTransaction().replace(R.id.fragment, hotFragment).commit();
     }
 }
