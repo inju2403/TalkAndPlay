@@ -17,8 +17,8 @@ import java.util.ArrayList;
 
 public class HotBulletinsAdapter extends RecyclerView.Adapter<HotBulletinsAdapter.ViewHolder> {
 
-    Context context;
-    ArrayList<HotBulletinsModel> items;
+    private Context context;
+    private ArrayList<HotBulletinsModel> items;
 
     public HotBulletinsAdapter(Context context, ArrayList<HotBulletinsModel> items) {
         this.context = context;

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -61,6 +62,16 @@ public class IntramuralNewsBulletinsAdapter extends RecyclerView.Adapter<Intramu
             intramural_news_group_name_textView = itemView.findViewById(R.id.intramural_news_group_name_textView);
             thumb_up_number_textView = itemView.findViewById(R.id.thumb_up_number_textView);
             thumb_down_number_textView = itemView.findViewById(R.id.thumb_down_number_textView);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int pos = getAdapterPosition();
+                    if(pos != RecyclerView.NO_POSITION) {
+                        Toast.makeText(context, pos + " clicked", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
         }
 
         public void setItem(IntramuralNewsBulletinsModel item) {
