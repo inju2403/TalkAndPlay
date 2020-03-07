@@ -7,7 +7,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -15,69 +17,29 @@
 
             <ImageView
                 android:id="@+id/face_imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                style="@style/Face_and_tradeMark_imageView_style"
                 android:layout_alignParentLeft="true"
-                android:layout_margin="5dp"
-                android:padding="5dp"
                 app:srcCompat="@drawable/face_icon_image" />
 
             <TextView
                 android:id="@+id/name_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_toRightOf="@+id/face_imageView"
-                android:layout_margin="5dp"
-                android:ellipsize="end"
-                android:gravity="center_vertical"
-                android:maxLines="1"
-                android:padding="5dp"
-                android:text="익명"
-                android:textColor="#000000"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+                style="@style/Bold_name_textView_style"
+                android:layout_toRightOf="@+id/face_imageView" />
 
             <TextView
                 android:id="@+id/date_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
-                android:ellipsize="end"
-                android:gravity="center_vertical"
-                android:maxLines="1"
-                android:padding="5dp"
-                android:layout_margin="5dp"
-                android:textSize="15sp"
-                android:text="03/02 17:21" />
+                style="@style/Date_with_time_textView_style"/>
 
         </RelativeLayout>
 
         <TextView
             android:id="@+id/title_textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:gravity="center_vertical"
-            android:maxLines="1"
-            android:padding="5dp"
-            android:layout_margin="5dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:text="제목" />
+            style="@style/Title_textView_style"/>
 
         <TextView
             android:id="@+id/contents_textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:gravity="center_vertical"
-            android:maxLines="2"
-            android:padding="5dp"
-            android:layout_margin="5dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:text="내용" />
+            style="@style/Two_lines_contens_textView_style" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -85,67 +47,29 @@
 
             <TextView
                 android:id="@+id/realtime_date_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:ellipsize="end"
-                android:gravity="center_vertical"
-                android:maxLines="1"
-                android:padding="5dp"
-                android:layout_margin="5dp"
-                android:textSize="13sp"
-                android:text="○○게시판"/>
+                style="@style/Small_name_textView_style"/>
 
             <ImageView
                 android:id="@+id/thumb_up_imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
-                android:padding="5dp"
                 android:layout_toLeftOf="@id/thumb_up_number_textView"
-                android:tint="#FF3333"
+                style="@style/Thumb_up_imageView_style"
                 app:srcCompat="@drawable/thumb_up_image" />
 
             <TextView
                 android:id="@+id/thumb_up_number_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:layout_toLeftOf="@id/thumb_down_imageView"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="5dp"
-                android:padding="5dp"
-                android:textColor="#FF3333"
-                android:text="90" />
+                style="@style/Thumb_up_number_style"
+                android:layout_toLeftOf="@id/thumb_down_imageView" />
 
             <ImageView
                 android:id="@+id/thumb_down_imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                style="@style/Thumb_down_imageView_style"
                 android:layout_toLeftOf="@id/thumb_down_number_textView"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
-                android:padding="5dp"
-                app:srcCompat="@drawable/thumb_down_image"
-                android:tint="#00AAAA"/>
+                app:srcCompat="@drawable/thumb_down_image"/>
 
             <TextView
                 android:id="@+id/thumb_down_number_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="5dp"
-                android:padding="5dp"
-                android:textColor="#00AAAA"
-                android:text="7" />
+                style="@style/Thumb_down_number_style"
+                android:layout_alignParentRight="true"/>
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>
